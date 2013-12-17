@@ -1,0 +1,6 @@
+.gradle/
+simian_plugin.iml
+simian_plugin.ipr
+simian_plugin.iws
+build
+repo/

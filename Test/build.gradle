@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+buildscript {
+    repositories {
+        maven {
+            url uri('../repo')
+        }
+    }
+    dependencies {
+        classpath('com.rever:simian_plugin:0.0.1')
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'simian'

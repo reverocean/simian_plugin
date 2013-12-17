@@ -1,0 +1,35 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+project.group = "com.rever"
+
+version = '0.0.1'
+
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://${projectDir}/repo")
+        }
+    }
+}
+
+//
+//task wrapper(type: Wrapper) {
+//    gradleVersion = '1.9'
+//    distributionUrl = 'http://repository:port/content/groups/public/org/gradle/gradle/1.1/gradle-1.1-bin.zip'
+//}
+//
+//uploadArchives {
+//    repositories.mavenDeployer {
+//        repository(url: 'http://repository:port/content/repositories/inhouse') {
+//            authentication(userName: "deployment", password: "nexus")
+//        }
+//    }
+//}
